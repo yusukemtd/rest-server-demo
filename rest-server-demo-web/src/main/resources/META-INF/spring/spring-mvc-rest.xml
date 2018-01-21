@@ -32,6 +32,10 @@
                         <property name="dateFormat">
                             <bean class="com.fasterxml.jackson.databind.util.StdDateFormat"/>
                         </property>
+                        <!-- For snake case JSON fields. -->
+                        <property name="propertyNamingStrategy">
+                            <bean class="com.fasterxml.jackson.databind.PropertyNamingStrategy.SnakeCaseStrategy"/>
+                        </property>
                     </bean>
                 </property>
             </bean>
