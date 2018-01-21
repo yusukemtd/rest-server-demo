@@ -118,6 +118,7 @@
         <location>/WEB-INF/views/common/error/systemError.jsp</location>
     </error-page>
 
+<!-- 
     <error-page>
         <error-code>404</error-code>
         <location>/WEB-INF/views/common/error/resourceNotFoundError.jsp</location>
@@ -127,7 +128,24 @@
         <exception-type>java.lang.Exception</exception-type>
         <location>/WEB-INF/views/common/error/unhandledSystemError.html</location>
     </error-page>
-    
+ -->
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/api/v1/error</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/WEB-INF/views/common/error/unhandledSystemError.json</location>
+    </error-page>
+
+    <mime-mapping>
+        <extension>json</extension>
+        <mime-type>application/json;charset=UTF-8</mime-type>
+    </mime-mapping>
+
+
     <session-config>
         <!-- 30min -->
         <session-timeout>30</session-timeout>
