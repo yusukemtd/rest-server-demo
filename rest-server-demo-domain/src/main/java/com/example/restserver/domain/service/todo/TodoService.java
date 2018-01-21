@@ -6,6 +6,8 @@ import com.example.restserver.domain.model.Todo;
 
 public interface TodoService {
 
+    Todo findOne(String todoId);
+
     Collection<Todo> findAll();
 
     Todo create(Todo todo);

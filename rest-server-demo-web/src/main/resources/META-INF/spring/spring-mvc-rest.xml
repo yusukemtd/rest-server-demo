@@ -40,7 +40,7 @@
 
     <mvc:default-servlet-handler />
 
-    <context:component-scan base-package="todo.api" />
+    <context:component-scan base-package="com.example.restserver.api" />
 
     <mvc:interceptors>
         <mvc:interceptor>

@@ -47,13 +47,13 @@ public class TodoRestController {
         return createdTodoResponse;
     }
 
-    // @RequestMapping(value = "{todoId}", method = RequestMethod.GET)
-    // @ResponseStatus(HttpStatus.OK)
-    // public TodoResource getTodo(@PathVariable("todoId") String todoId) {
-    // Todo todo = todoService.findOne(todoId);
-    // TodoResource todoResource = beanMapper.map(todo, TodoResource.class);
-    // return todoResource;
-    // }
+    @RequestMapping(value = "{todoId}", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public TodoResource getTodo(@PathVariable("todoId") String todoId) {
+        Todo todo = todoService.findOne(todoId);
+        TodoResource todoResource = beanMapper.map(todo, TodoResource.class);
+        return todoResource;
+    }
 
     @RequestMapping(value = "{todoId}", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.OK)
